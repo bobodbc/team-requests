@@ -1,16 +1,30 @@
 type: collection.insomnia.rest/5.0
 schema_version: "5.1"
 name: Team
+meta:
+  id: wrk_team
 collection:
   - name: Get a request echo
     url: https://httpbin.org/get
     method: GET
+    meta:
+      id: req_team_get
     headers:
       - name: Accept
         value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
   - name: Post a JSON body
     url: https://httpbin.org/post
     method: POST
+    meta:
+      id: req_team_post
     headers:
       - name: Content-Type
         value: application/json
@@ -20,7 +34,17 @@ collection:
         {
           "source": "ptchwork-team"
         }
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 environments:
   name: Base Environment
+  meta:
+    id: env_team_base
   data:
     team: ptchwork
