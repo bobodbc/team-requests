@@ -1,0 +1,26 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Team
+collection:
+  - name: Get a request echo
+    url: https://httpbin.org/get
+    method: GET
+    headers:
+      - name: Accept
+        value: application/json
+  - name: Post a JSON body
+    url: https://httpbin.org/post
+    method: POST
+    headers:
+      - name: Content-Type
+        value: application/json
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "source": "ptchwork-team"
+        }
+environments:
+  name: Base Environment
+  data:
+    team: ptchwork
