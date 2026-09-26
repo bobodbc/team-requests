@@ -42,6 +42,28 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - name: Post a HOT body
+    url: https://httpbin.org/patch
+    method: PATCH
+    meta:
+      id: req_team_post
+    headers:
+      - name: Content-Type
+        value: application/json
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "source": "ptchwork-team"
+        }
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 environments:
   name: Base Environment
   meta:
