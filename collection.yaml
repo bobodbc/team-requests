@@ -42,11 +42,11 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - name: Post a HOT body
+  - name: Patch a HOT body
     url: https://httpbin.org/patch
     method: PATCH
     meta:
-      id: req_team_post
+      id: req_team_patch
     headers:
       - name: Content-Type
         value: application/json
